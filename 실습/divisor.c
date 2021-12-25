@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int num = 75;
+int num;
 int result = 2;
 
 void print(int* array,int index) {
@@ -24,12 +24,13 @@ void print(int* array,int index) {
 
 void main() {
 
+	printf("정수를 입력하세요 :");
+	scanf_s("%d", &num);
 	int i = 1;
 	int index = 0;
-	int* array = malloc(sizeof(int) * 10);
+	int* array = malloc(sizeof(int) * num);
 
 	while (i < result)
-
 	{
 		if (num % i == 0) {
 			result = num / i;
@@ -45,7 +46,7 @@ void main() {
 		}
 		i = i + 1;
 	}
+
 	print(array, index);
-	printf("Hello_World\n");
-	
+	printf("Hello_World\n");	
 }
